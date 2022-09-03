@@ -52,7 +52,7 @@ export class FSDatabase extends RamDatabase{
 
   isExists(key){
     this.#pullDB();
-    super.isExists(key);
+    return super.isExists(key);
   }
 
   removeItem(key){
