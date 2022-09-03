@@ -3,7 +3,7 @@ import * as dotenv from "dotenv";
 import jwt from "jsonwebtoken";
 // import * as Redis from "ioredis";
 import cros from "cors";
-import { RamDatabase } from "./data/Database.js";
+import { FSDatabase, RamDatabase } from "./data/Database.js";
 
 dotenv.config();
 
@@ -53,7 +53,8 @@ function applyCORS() {
 }
 
 const AUTH_JWT_KEY = generateJWT();
-const db = new RamDatabase();
+// const db = new RamDatabase();
+const db = new FSDatabase();
 
 app.post("/api/get", async (req, res) => {
   const { key } = req.body;
