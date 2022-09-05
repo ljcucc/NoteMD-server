@@ -22,3 +22,19 @@ npm start
 > mention that the JWT (JsonWebToken) is the access key to your server, keep it safe somewhere to keep your data safety.
 
 4. reload the https://notes.ljuc.cc to apply changes, which should show a new folder call "server" at the drawer UI.
+
+## Run a docker container
+
+execute:
+
+```
+bin/docker.sh
+```
+
+then port will default on 8081.
+
+to get your JWT token, run command:
+
+```
+docker logs mdserver
+```
